@@ -19,7 +19,7 @@
   "properties": {
      "text": {
        "type": "string",
-       "description": "Background color",
+       "description": "Text to appear on SAC.",
        "default": "Hello World"
      }
    },
