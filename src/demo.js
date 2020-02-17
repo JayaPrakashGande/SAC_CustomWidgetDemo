@@ -1,6 +1,6 @@
 (function () {
   let template = document.createElement("template");
-  template.innerHTML = `<p id = "customWidgetText"></p>`;
+  template.innerHTML = `<p id = "customWidgetText">Default Text.</p>`;
   
   class Demo extends HTMLElement {
     constructor () {
