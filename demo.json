@@ -1,0 +1,43 @@
+{
+  "id": "com.jp.demo",
+  "version": "1.0.0",
+  "name": "Demo - Custom Widget",
+  "description": "Custom Widget - Demo",
+  "newInstancePrefix": "Demo",
+  "icon": "",
+  "vendor": "Jaya Prakash G",
+  "eula": "",
+  "license": "MIT",
+  "webcomponents": [
+     {
+     "kind": "main",
+     "tag": "com-jp-demo",
+     "url": "https://github.com/JayaPrakashGande/SAC_CustomWidgetDemo/blob/master/src/demo.js",
+     "integrity": "",
+     "ignoreIntegrity": true
+     }],
+  "properties": {
+     "text": {
+       "type": "string",
+       "description": "Background color",
+       "default": "Hello World"
+     }
+   }
+   "methods": {
+     "setText": {
+       "description": "Sets the Text.",
+       "parameters": [
+         {
+         "name": "newText",
+         "type": "string",
+         "description": "The new background color"
+         }],
+       "body": "this.text = newText;"
+     }
+   },
+   "events": {
+     "onClick": {
+        "description": "Called when the user clicks the Custom Widget."
+     }
+ }
+}
