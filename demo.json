@@ -22,7 +22,7 @@
        "description": "Background color",
        "default": "Hello World"
      }
-   }
+   },
    "methods" : {
      "setText": {
        "description": "Sets the Text.",
