@@ -4,7 +4,7 @@
   "name": "Demo - Custom Widget",
   "description": "Custom Widget - Demo",
   "newInstancePrefix": "Demo",
-  "icon": "",
+  "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABeUlEQVQ4T6WTPy9EURDFz8x9bz+BkFiNaCUIGpFIVBJqWVFo9Ru2tI2GSJRb6YSoaTZaGgpEKxoE4Qvsu3NHJrm7edaf3fDK++795Zw5Zwj//OiX90VmLtn/EMIhgMfv7v4IcM5dAjgnIlXVKRGZ7AhIkmROVVNVLRJRRUQG7ZFz7l5Vd4jIVDRE5KQJaylg5jKAFSJ6BaDMvJZl2ZVdTNN0LISwbeeq2gtgP4SwZf+agIJz7jnKvOsw1yGzJyJ9pqYJSJIkuVXVqojYwEz2AoBahK2KyHE8XySiDe/9CADfspCm6XgIoS4iPSbVOfcAYDUCaiIyEAHvzrmZRqNxm7fQ9HnaDYCZZ7Msu84DzMJNtHDUwUKJiKre++G8BRvii4hMAOhmiBdxiFk+xnUAy0T0ZmRmruRiHI0xWqssxr0Qwu6nGUTZ8wAKsUjlfJEAbFqdiUi89/UvRWrP3rImojNbBVWd7qrKbZB+Zl6Ky3QA4KnjLvxlsz8Au5i/Eb07Q2IAAAAASUVORK5CYII=",
   "vendor": "Jaya Prakash G",
   "eula": "",
   "license": "MIT",
