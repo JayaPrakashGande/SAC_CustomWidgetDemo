@@ -23,7 +23,7 @@
        "default": "Hello World"
      }
    }
-   "methods": {
+   "methods" : {
      "setText": {
        "description": "Sets the Text.",
        "parameters": [
@@ -33,7 +33,12 @@
          "description": "The new background color"
          }],
        "body": "this.text = newText;"
-     }
+     },
+    "getText": {
+      "returnType": "string",
+      "description": "Return the Current Text of the element.",
+      "body": "return this.text;"
+    }
    },
    "events": {
      "onClick": {
