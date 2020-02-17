@@ -33,5 +33,5 @@
       return this._textElement.innerHTML;
     }
   }
-  customElements.define(com.jp.demo, Demo);
+  customElements.define(com-jp-demo, Demo);
 })();
