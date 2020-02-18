@@ -1,37 +1,62 @@
-(function () {
-  let template = document.createElement("template");
-  template.innerHTML = `<p id = "customWidgetText">Default Text.</p>`;
-  
-  class Demo extends HTMLElement {
-    constructor () {
-      super();
-      let shadowHost = this.attachShadow({mode : "open"});
-      shadowHost.appendChild(template.content.cloneNode(true));
-      this.addEventListener("click", event => {
-        var event = new Event("onClick");
-        this.dispatchEvent(event);
-      });
-      var this._textElement = document.getElementByID("customWidgetText");
-      this._props = {};
-    }
+(function() { 
+	let template = document.createElement("template");
+	template.innerHTML = `
+		<style>
+		:host {
+			border-radius: 25px;
+			border-width: 1px;
+			border-color: black;
+			border-style: solid;
+            display: block;
+            text-align : center;
+		} 
+        </style> 
+        <p id="customElement">Default Text.</p>
+	`;
     
-    onCustomWidgetBeforeUpdate(changedProperties) {
-      this._props = {...this._props, ...changedProperties};
-    }
+	class Demo extends HTMLElement {
+        constructor() {
+            console.log("--------in Constructor----------");
+			super(); 
+			let shadowRoot = this.attachShadow({mode: "open"});
+			shadowRoot.appendChild(template.content.cloneNode(true));
+			this.addEventListener("click", event => {
+				var event = new Event("onClick");
+				this.dispatchEvent(event);
+            });
+            this._pElement = this.shadowRoot.getElementById("customElement");
+            this._props = {};
+        }
+        
+        connectedCallback() {
+            console.log("--------in connectedCallback----------");
+        }
+        
+        disconnectedCallback() {
+            console.log("--------in disconnectedCallback----------");
+        }
+        
+        onCustomWidgetDestroy() {
+            console.log("--------in Destroy----------");
+        }
     
-    onCustomWidgetAfterUpdate(changedProperties) {
-      if ("text" in changedProperties) {
-        this._textElement.innerHTML = changedProperties["text"];
-      }
-    }
+		onCustomWidgetBeforeUpdate(changedProperties) {
+            console.log("--------in onCustomWidgetBeforeUpdate----------");
+			this._props = { ...this._props, ...changedProperties };
+		}
+
+		onCustomWidgetAfterUpdate(changedProperties) {
+            console.log("--------in onCustomWidgetAfterUpdate----------");
+			if ("text" in changedProperties) {
+                this._pElement.innerHTML = changedProperties["text"];
+              }
+        }
+        
+        onCustomWidgetResize(x, y) {
+            console.log("--------in Resize----------" + x + "------" + y);
+        }
+	}
     
-    set text(newText) {
-      this._textElement.innerHTML = newText;
-    }
-    
-    get text() {
-      return this._textElement.innerHTML;
-    }
-  }
-  customElements.define("com-jp-demo", Demo);
+    console.log("--------just Before Registring the WC----------");
+	customElements.define("com-jp-demo", Demo);
 })();
